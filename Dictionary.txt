@@ -1,0 +1,5 @@
+map = {} #init
+map.get() #Search Something
+map.values #values of every Element
+max(map.values) #maximum values of the elements
+SortedhashMap = sorted(dict(listMap).items(), key=lambda x:x[1])
