@@ -1,0 +1,8 @@
+The Python interpreter will handle it for you. You just have to do your operations (+, -, *, /), and it will work as normal.
+
+The int value is unlimited.
+
+Be careful when doing division. By default, the quotient is turned into float, but float does not support such large numbers. 
+If you get an error message saying float does not support such large numbers, then it means the quotient is too large to be stored in float you’ll have to use floor division (//).
+
+It ignores any decimal that comes after the decimal point, this way, the result will be int, so you can have a large number result.
