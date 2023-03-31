@@ -1,0 +1,11 @@
+class Solution:
+    def leastInterval(self, tasks: List[str], n: int) -> int:
+        taskCount = {}
+        for task in tasks:
+            taskCount[task] = 1 + taskCount.get(task, 0)
+        
+        maxTask = max(taskCount.values())
+        maxTaskCount = sum(1 for val in taskCount.values() if val == maxTask)
+
+        slotNum = (maxTask - 1) * (n + 1) + maxTaskCount 
+        return max(slotNum, len(tasks))
