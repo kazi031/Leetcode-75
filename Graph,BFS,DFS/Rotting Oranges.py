@@ -18,13 +18,12 @@ class Solution:
                 r, c = q.popleft()
                 for dr, dc in directions:
                     rx, cx = r + dr, c + dc
-                    if (rx not in range(rows) or
-                        cx not in range(cols) or
-                        grid[rx][cx] != 1):
-                         continue
-                    grid[rx][cx] = 2
-                    q.append([rx,cx])
-                    fresh -= 1
+                    if (rx in range(rows) and
+                        cx in range(cols) and
+                        grid[rx][cx] == 1): 
+                        grid[rx][cx] = 2
+                        q.append([rx,cx])
+                        fresh -= 1
             time += 1
         
         return time if fresh == 0 else -1
