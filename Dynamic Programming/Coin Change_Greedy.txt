@@ -2,6 +2,9 @@
 amount = 6249
 
 14
+
+Greedy Doesn't Work:
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         res = 0
